@@ -1,0 +1,28 @@
+//Hao Miao
+//ECE 387 Individual Project
+//Notification system for gym mannager
+
+int potPin=0;
+int toucPin=1;
+
+int val=0;
+int val2;
+int val3;
+
+void setup() {
+Serial.begin(9600);
+pinMode(ledPin,OUTPUT);
+pinMode(potPin,INPUT);
+}
+
+void loop() {
+val= analogRead(potPin);
+val2=val/205;
+// 2^10=1024
+// voltage= 1024/205
+val3= analogRead(touchPin);
+
+Serial.println(val2);
+
+delay(400);
+}
